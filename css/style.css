@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(to bottom, #ae69e0, #835ec9, #523e9c, #301f6d);
+  color: rgb(221, 221, 12);
+}
+
+.textos {
+    font-size: 32px;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+
+
+
+.center {
+    display:block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 48px;
+}
+
+.bg-audio {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+ul.pokemon-list {
+    font-size: 24px;
+    list-style-type: disc;
+    padding-right: 1.5rem;
+}
+
+#Status {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px;
+}
+
