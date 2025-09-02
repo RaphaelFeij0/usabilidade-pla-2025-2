@@ -2,7 +2,7 @@ body {
     margin: 0;
   font-family: 'Comic Sans MS', cursive;
   background: linear-gradient(to bottom, #ae69e0, #835ec9, #523e9c, #301f6d);
-  color: rgb(221, 221, 12);
+  color: #dddd0c;
 }
 
 .textos {
@@ -39,3 +39,36 @@ ul.pokemon-list {
     margin: 20px;
 }
 
+.progress-bar {
+  width: 300px;
+  height: 30px;
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 16px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  border-radius: 15px 0 0 15px;
+  transition: width 1s ease-in-out;
+}
+
+.spinner {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 5px solid #dddd0c;
+            border-radius: 50%;
+            border-top: 5px solid #3498db;
+            animation: spin 1s linear infinite;    }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }

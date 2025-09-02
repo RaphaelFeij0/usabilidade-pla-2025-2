@@ -5,10 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/pokemon-solid">
     <link rel="stylesheet" href="css/style.css">
+  
   </head>
   
   <div id="Inicio">
     <body>
+     <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+   
+    
+    <img 
+      id="Gligar"
+      src="images/Mr_Parker_Gligar.png"
+      alt="Gliscor animado"
+      loading="lazy"
+      width="480"
+      height="360"
+      style="display: none; margin: auto;">
+      
+
+    <script>
+        function updateProgressBar(percentage) {
+            const progressBar = document.getElementById('progress');
+            progressBar.style.width = percentage + '%';
+        }
+
+        // Simular progresso
+        let progress = 0;
+        const interval = setInterval(() => {
+            if (progress >= 100) {
+                clearInterval(interval);
+                document.querySelector('.progress-bar').style.display = 'none';
+                document.getElementById('Gligar').style.display = 'block';
+            } else {
+                progress += 10;
+                updateProgressBar(progress);
+            }
+        }, 1000);
+
+
+    </script>
+
+
+
+
+
       <h1 style="font-family: 'Comic Sans MS', cursive; font-size: 48px; text-align: center"> 
         GLISCOR
       </h1>
@@ -25,13 +67,42 @@
       <!--Codigo para colocar imagem-->
       
       <img
+      id="Gliscor"
         src="images/472.png"
         alt="Melhor Pokemon"
         loading="lazy"
         width="1280"
         height="720"
-        style="display: block; margin: auto;"
+        style="display: block; margin: auto; cursor: pointer;"
       >
+      
+
+      <script>
+  window.onload = function () {
+    const Gliscor = document.getElementById('Gliscor');
+
+    Gliscor.addEventListener('click', () => {
+      if (Gliscor.src.includes('472.png')) {
+        Gliscor.src = 'images/0472_Shiny_Gliscor.png';
+      } else {
+        Gliscor.src = 'images/472.png';
+      }
+      });   
+  
+   
+  const Weavile = document.getElementById('Weavile');
+
+    Weavile.addEventListener('click', () => {
+      if (Weavile.src.includes('461.png')) {
+        Weavile.src = 'images/0461_Shiny_Weavile.png';
+      } else {
+        Weavile.src = 'images/461.png';
+      }
+      });   
+  };
+
+
+</script>
       <br>
       <br>
       <br>
@@ -166,10 +237,44 @@
         <summary>
           Maior Inimigo do Gliscor
         </summary>
-        <p>
-          Tipo Gelo
-        </p>
+       
+       <div class="spinner" id="spinner"></div>
+
+      <img 
+  id="Weavile" 
+  src="images/461.png" 
+  alt="Weavile" 
+  style="display: none; margin: auto; cursor: pointer;" 
+  width="480" 
+  height="360"
+  loading="lazy"
+/>
+
+    <script>
+        // Exemplo de como ocultar o spinner após um tempo
+        const spinner = document.getElementById('spinner');
+        const imagem = document.getElementById('Weavile');
+
+        setTimeout(() => {
+    // Oculta o spinner
+    spinner.style.display = 'none';
+
+    // Exibe a imagem
+    imagem.style.display = 'block';
+  }, 10000); // 10 segundos
+
+  
+    </script>
+
+  
+
+
       </details>
+
+
+      
+
+
       <br>
       <br>
       <br>
