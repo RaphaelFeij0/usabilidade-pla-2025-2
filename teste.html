@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form>
+        <h2>Tela de Login</h2>
+        <label for="username">
+            User:
+        </label>
+        <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+        <label>
+            Email:
+        </label>
+        <input type="text" id="email" name="email" placeholder="Digite seu email" required>
+        <label for="password">
+            Senha:
+        </label>
+        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+        
+        <input type="submit" value="Login">
+
+    </form>
+    <div class="editor-container">
+        <button id="undo" onclick="undoAction()">Desfazer</button>
+        <button id="redo" onclick="redoAction()">Refazer</button>
+        <button class="button1" id="redo" onclick="deleteAction()">Deletar</button>
+    
+    </div>
+    <div contenteditable="true" class="editor" id="editor"></div>
+    <script src="script.js"></script>
+
+    <h2>Configurações da Conta</h2>
+    <button class="btn btn-danger" onclick="abrirModal()">Excluir Conta</button>
+    
+    <div id="modalConfirmacao" class="modal">
+        <div class="modal-content">
+            <h3>Tem certeza de que deseja excluir sua conta?</h3>
+            <p>Essa ação é irreversível.</p>
+            <div class="buttons">
+                <button class="btn btn-danger" onclick="confirmarExclusao()">Sim, Excluir</button>
+                <button class="btn btn-cancel" onclick="fecharModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
